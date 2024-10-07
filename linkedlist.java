@@ -61,6 +61,13 @@ public class LinkedList {
             current = current.next;
         }
         movingNode = current;
-        
+
          // If the node to move was not found
         if (movingNode == null) return;
+        
+         // Remove the node from its current position
+        if (movingPrev != null) {
+            movingPrev.next = movingNode.next;
+        } else {
+            head = movingNode.next; // Moving the head
+        }
