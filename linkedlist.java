@@ -53,3 +53,11 @@ public class LinkedList {
         Node prev = null;
         Node movingNode = null;
         Node movingPrev = null;
+
+ // Find the node to move
+        for (int i = 0; current != null && i < currentIndex; i++) {
+            movingPrev = prev;
+            prev = current;
+            current = current.next;
+        }
+        movingNode = current;
