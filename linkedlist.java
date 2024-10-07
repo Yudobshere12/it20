@@ -45,3 +45,11 @@ public class LinkedList {
             current = current.next;
         }
     }
+   // Method to move a node to a new position /swap nodes
+    public void moveNodePointer(int currentIndex, int newIndex) {
+        if (head == null || currentIndex == newIndex) return;
+
+        Node current = head;
+        Node prev = null;
+        Node movingNode = null;
+        Node movingPrev = null;
