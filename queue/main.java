@@ -36,9 +36,15 @@ public class SimpleQueueProgram {
                     case 4:
                         System.out.println("Thank You for running this simple program!");
                         sc.close();
+                           return; // Exit the program
+                    default:
+                        System.out.println("Invalid input. Please try again!");
                 }
+            } catch (Exception e) {
+                System.out.println("Input is not valid.");
+                sc.next(); // Clear the invalid input
             }
         }
     }
 }
-
+ 
